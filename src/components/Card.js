@@ -15,10 +15,10 @@ export default function Card({card, handleChoice, flipped, disabled}){
         
             <div className="card" key=''>
                 <div className={flipped ? 'flipped' : ''}>
-                    <img src={card.src} className='front' alt='front of card/>
+                    <img src={card.src} className='front' alt='front of card'/>
                     <img 
                         src={back} 
-                        className='back' 
+                        className="back" 
                         onClick={handleClick}
                         alt='back of card'
                     />
