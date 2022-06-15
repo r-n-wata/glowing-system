@@ -12,7 +12,6 @@ export default function App(){
     const [choiceTwo, setChoiceTwo] = useState(null)
     const [disabled, setDisabled] = useState(false)
     
-    let arr = []
     useEffect(() =>{
         fetch('https://api.pokemontcg.io/v2/cards')
             .then(res => res.json())
