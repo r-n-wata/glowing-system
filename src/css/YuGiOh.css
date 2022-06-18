@@ -1,0 +1,118 @@
+
+.play-container-y{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.8); 
+    transition: .5s ease-in-out;
+}
+.play-btn-y{
+   
+    width:40%;
+    height:20%;
+    border-radius: 12%;
+    font-size: 2rem;;
+    background:rgb(209, 209, 209);
+
+
+}
+
+
+.hidden{
+    display:none
+}
+
+
+.play-btn-y:hover{
+    background-color: rgb(94, 94, 94);
+    cursor: pointer;
+}
+
+
+
+.game-y{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 1rem; */
+    background:url('/public/img/backgroudYugoh.jpg');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+    height: 100%;
+    width:100%;
+    overflow-y: hidden;
+    font-family: sans-serif;
+    margin-left:-.4rem;
+
+   
+  
+}
+
+.main--wrapper-y{
+    display:flex;
+    gap:.5rem;
+    width:100%;
+    height:100%; padding-bottom:2rem;
+   
+}
+
+.turns-y, .title-y{
+    color: rgb(5, 196, 34);
+    text-shadow: -2px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+}
+.title-y{
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 5px;
+}
+.turns-y {
+    width:45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.5rem;;;
+ 
+}
+
+.main-y{
+    width:100%;
+    padding-top:1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:.7rem;
+    height:100vh;
+
+  
+    
+    
+}
+
+.new-game-btn-y{
+    padding:.5rem .9rem;
+    background:rgba(128, 200, 137, 0.4);
+    /* color:rgb(131, 129, 129) */
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 11%;
+    color:black
+
+}
+
+.new-game-btn-y:hover{
+    background:rgba(150, 150, 150, 0.4);
+    cursor: pointer;
+}
+.card-grid-y{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    
+    
+ 
+}
