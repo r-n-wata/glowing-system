@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import './css/App.css'
 import Pokemon from "./components/Pokemon";
 import YuGiOh from "./components/YuGiOh";
@@ -40,8 +40,8 @@ export default function App(){
 
                     <img src={yugiohImg}/>  */}
 
-                    <div className="pokemon" onClick={showPokemon}><img src={pokemonImg}/></div>
-                    <div className="yugioh" onClick={showYugioh}><img src={yugiohImg}/></div>
+                    <div className="pokemon" onClick={showPokemon}><img src={pokemonImg} alt=''/></div>
+                    <div className="yugioh" onClick={showYugioh}><img src={yugiohImg} alt=''/></div>
                 </div>
             
 
