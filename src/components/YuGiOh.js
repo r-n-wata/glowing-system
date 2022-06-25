@@ -13,6 +13,7 @@ export default function App(){
     const [disabled, setDisabled] = useState(false)
     const [play, setPlay] =useState(false)
     
+    
     useEffect(() =>{
         fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php')
             .then(res => res.json())
@@ -102,10 +103,15 @@ export default function App(){
             </div>
             
             <div className="game-y">
-                <h2 className={!play ? 'hidden' : "turns-y"}>Turns: {turns}</h2>
+                <div className="options-section">
+
+                    <h2 className={!play ? 'hidden' : "turns"}>Score: {turns}</h2>
+                <button type='button' className={!play ? 'hidden' : "new-game-btn" } onClick={shuffleCards}>Restart</button>
+                </div>
+                
                 <div className="main-y">
-                    <h1 className={!play ? 'hidden' : "title-y"}>Matching Game!</h1>
-                    <button type='button' className={!play ? 'hidden' : "new-game-btn-y" } onClick={shuffleCards}>New Game</button>
+                    {/* <h1 className={!play ? 'hidden' : "title-y"}>Matching Game!</h1> */}
+                    
 
                     <div className="card-grid-y">
 

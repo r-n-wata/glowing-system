@@ -56,11 +56,19 @@
     display:flex;
     gap:.5rem;
     width:100%;
-    height:100%; padding-bottom:2rem;
+    height:100%; 
+    padding-bottom:2rem;
    
 }
-
-.turns-y, .title-y{
+.options-section{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width:30%;
+    gap:2rem;
+}
+.turns, .title-y{
     color: rgb(5, 196, 34);
     text-shadow: -2px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
 }
@@ -68,14 +76,28 @@
     font-family: 'Anton', sans-serif;
     letter-spacing: 5px;
 }
-.turns-y {
-    width:45%;
+.turns {
+    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: flex-end;
-    font-size: 2.5rem;;;
+    font-size: 3rem;;;
+    
+
  
+}
+
+.new-game-btn{
+    color:black;
+    font-size:2.5rem;
+    font-weight:700;
+    background:none;
+    width:50%;
+    border:none;
+    display: flex;
+    justify-content: center;
+    text-shadow: -2px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
 }
 
 .main-y{

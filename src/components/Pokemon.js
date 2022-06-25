@@ -3,6 +3,9 @@ import '../css/Pokemon.css'
 import Card from "./Card";
 
 
+
+
+
 export default function App(){
 
     const [pokemonData, setPokemonData] = useState([])
@@ -12,6 +15,8 @@ export default function App(){
     const [choiceTwo, setChoiceTwo] = useState(null)
     const [disabled, setDisabled] = useState(false)
     const [play, setPlay] =useState(false)
+
+    
     
     useEffect(() =>{
         fetch('https://api.pokemontcg.io/v2/cards')
@@ -96,14 +101,21 @@ export default function App(){
         <div className="main--wrapper">
             <div className={play ? 'hdden' : "play-container"}>
 
-              <button type='button' className={play? 'hidden' : "play-btn" } onClick={handlePlay}>Play Game!</button>  
+              <button type='button' className={play? 'hidden' : "play-btn" } onClick={handlePlay}>Play Game!</button>
+             
             </div>
             
             <div className="game">
-                <h2 className={!play ? 'hidden' : "turns"}>Turns: {turns}</h2>
+
+            <div className="options-section">
+
+                <h2 className={!play ? 'hidden' : "turns"}>Score: {turns}</h2>
+                <button type='button' className={!play ? 'hidden' : "new-game-btn" } onClick={shuffleCards}>Restart</button>
+                {/* <button onClick={() => navigate(-1)}>Go back</button> */}
+                </div>
+               
                 <div className="main">
-                    <h1 className={!play ? 'hidden' : "title"}>Matching Game!</h1>
-                    <button type='button' className={!play ? 'hidden' : "new-game-btn" } onClick={shuffleCards}>New Game</button>
+                
 
                     <div className="card-grid">
 

@@ -12,40 +12,70 @@ body{
 }
 
 .chooseGame-container{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position:relative;
     height:100vh;
-    gap:3rem;
-    background-color: rgba(0, 0, 0, .6);
-    
+    display:flex;
+
 }
 
-/* .chooseGame-container--imgs img{
-    width:
-} */
+ .main-title{
+    position:absolute;
+    left:50%;
+    top:10%;
+    transform:translate(-50%, -50%);
+    font-family: 'Anton', sans-serif;
+    color: rgb(5, 196, 34);
+    text-shadow: -2px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+    font-size:3rem;
+    margin-top:1rem;
+}
+
+
+
+
+
+.pokemon-img{
+    background:url('../img/pokemon-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    width:50%;
+    height:100vh;
+}
+.yugioh-img{
+    background:url('../img/yugioh-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:50%;
+    height:100vh;
+}
 
 .chooseGame-container--imgs{
-    width:40%;
-    height:50%;
     display:flex;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .pokemon{
-    background:url('../img/pokemon.jfif');
+    /* background:url('../img/pokemon.jfif'); */
     width:50%;
     height:100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .yugioh{
-    background:url('../img/yugioh.jfif');
+    /* background:url('../img/yugioh.jfif'); */
     width:50%;
     height:100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    
+}
+
+img {
+    width:100%;
 }
 
 .pokemon:hover, .yugioh:hover{
