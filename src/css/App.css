@@ -34,8 +34,8 @@ body{
 
 
 
-.pokemon-img{
-    background:url('../img/pokemon-back.jpg');
+.simpsons-img{
+    background:url('../img/1148429.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
@@ -59,26 +59,22 @@ body{
 
 }
 
-.pokemon{
+.simpsons, .yugioh{
     /* background:url('../img/pokemon.jfif'); */
     width:50%;
     height:100%;
+    /* height:100%; */
     /* background-repeat: no-repeat;
     background-size: cover; */
 }
 
-.yugioh{
-    /* background:url('../img/yugioh.jfif'); */
-    width:50%;
-    height:100%;
-    
-}
 
 img {
     width:100%;
+    height:10rem;
 }
 
-.pokemon:hover, .yugioh:hover{
+.simpsons:hover, .yugioh:hover{
     cursor: pointer;
     background-color: rgba(0, 0, 0, .6);
     background-blend-mode: color;

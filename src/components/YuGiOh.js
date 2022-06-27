@@ -3,7 +3,7 @@ import '../css/YuGiOh.css'
 import Card from "./Card";
 
 
-export default function App(){
+export default function YuGiOh(){
 
     const [yugiohData, setYugiohData] = useState([])
     const [cards, setCards] = useState([])
@@ -74,10 +74,8 @@ export default function App(){
                     })
                 })
             
-            console.log('matched!')
             resetTurn()
         }else{
-            console.log('no!')
             setTimeout(()  => resetTurn(), 1000)
         }
     }
@@ -95,9 +93,12 @@ export default function App(){
     setPlay(prevState => !prevState)
     shuffleCards()
    }
+   function refreshPage() {
+    window.location.reload(false);
+  }
     return (
         <div className="main--wrapper-y">
-            <div className={play ? 'hdden' : "play-container-y"}>
+            <div className={play ? 'hidden' : "play-container-y"}>
 
               <button type='button' className={play? 'hidden' : "play-btn-y" } onClick={handlePlay}>Play Game!</button>  
             </div>
@@ -107,6 +108,7 @@ export default function App(){
 
                     <h2 className={!play ? 'hidden' : "turns"}>Score: {turns}</h2>
                 <button type='button' className={!play ? 'hidden' : "new-game-btn" } onClick={shuffleCards}>Restart</button>
+                <button className="back" onClick={refreshPage}>Back</button>
                 </div>
                 
                 <div className="main-y">

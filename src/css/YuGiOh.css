@@ -88,7 +88,8 @@
  
 }
 
-.new-game-btn{
+
+.new-game-btn, .back{
     color:black;
     font-size:2.5rem;
     font-weight:700;
@@ -99,7 +100,21 @@
     justify-content: center;
     text-shadow: -2px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
 }
-
+.back{
+    border:5px solid black;
+    border-radius: 20%;
+    font-size: 2rem;
+    background: rgb(228,207,111);
+background: radial-gradient(circle, rgba(228,207,111,1) 0%, rgba(194,188,7,1) 48%, rgba(9,172,28,1) 99%);
+}
+.back:hover{
+    border:5px solid black;
+    border-radius: 20%;
+    font-size: 2rem;
+    background: rgb(153, 139, 74);
+    background: radial-gradient(circle, rgba(160, 145, 78, 0.8) 0%, rgba(133, 129, 5, 0.8) 48%, rgba(5, 109, 17, 0.8) 99%);
+    cursor: pointer;
+}
 .main-y{
     width:100%;
     padding-top:1rem;
@@ -133,6 +148,7 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
+    padding-top:2rem;
 
     
     
