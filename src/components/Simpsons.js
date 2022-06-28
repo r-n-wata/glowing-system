@@ -13,7 +13,7 @@ export default function Pokemon(){
     const [choiceTwo, setChoiceTwo] = useState(null)
     const [disabled, setDisabled] = useState(false)
     const [play, setPlay] =useState(false)
-    const [count, setCount] = useState(0)
+    
 
     
     
