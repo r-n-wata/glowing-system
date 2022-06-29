@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../css/YuGiOh.css'
-import Card from "./Card";
+import Card from "./Card"
+import * as ReactBootstrap from 'react-bootstrap'
 
 
 export default function YuGiOh(){
@@ -12,6 +13,7 @@ export default function YuGiOh(){
     const [choiceTwo, setChoiceTwo] = useState(null)
     const [disabled, setDisabled] = useState(false)
     const [play, setPlay] =useState(false)
+    const [loading , setLoading] = useState(false)
     
     
     useEffect(() =>{
@@ -23,7 +25,7 @@ export default function YuGiOh(){
                 let cardObj = array.map(el => el = {src: el.card_images[0].image_url_small, matched:false})
                 setYugiohData(cardObj)
                 // console.log(data.data.map(el => el.card_images[0].image_url_small))
-                
+                setLoading(true)
                
         })
     }, [])
@@ -113,10 +115,10 @@ export default function YuGiOh(){
                 
                 <div className="main-y">
                     {/* <h1 className={!play ? 'hidden' : "title-y"}>Matching Game!</h1> */}
-                    
+                    {!loading && <ReactBootstrap.Spinner animation="grow" className="grow"/>}
 
                     <div className="card-grid-y">
-
+                    
                         {cards.map(card => (
                             
                             <Card 

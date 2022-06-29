@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../css/Simpsons.css'
 import Card from "./Card";
+import * as ReactBootstrap from 'react-bootstrap'
 
 
 
@@ -13,6 +14,7 @@ export default function Pokemon(){
     const [choiceTwo, setChoiceTwo] = useState(null)
     const [disabled, setDisabled] = useState(false)
     const [play, setPlay] =useState(false)
+    const [loading , setLoading] = useState(false)
     
 
     
@@ -25,6 +27,7 @@ export default function Pokemon(){
                 const array = data.data
                 let cardObj = array.map(el => el = {src: el.image, matched:false})
                 setSimpsonsData(cardObj)
+                setLoading(true)
                 
                
         })
@@ -112,6 +115,7 @@ export default function Pokemon(){
             
             <div className="game">
 
+
             <div className="options-section">
 
                 <h2 className={!play ? 'hidden' : "turns"}>Score: {turns}</h2>
@@ -122,7 +126,7 @@ export default function Pokemon(){
                
                 <div className="main">
                 
-
+                {!loading && <ReactBootstrap.Spinner animation="grow" className="grow"/>}
                     <div className="card-grid">
 
                         {cards.map(card => (

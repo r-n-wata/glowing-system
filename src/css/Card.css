@@ -32,3 +32,19 @@
     transform: rotateY(90deg);
     transition-delay:0s;
 }
+
+
+@media (max-width:500px){
+    
+
+.card img{
+    width:4rem;
+    height:7rem;
+    display:block;
+     border-radius:4%;
+}
+
+
+
+
+}

@@ -147,3 +147,147 @@ background: radial-gradient(circle, rgba(228,207,111,1) 0%, rgba(194,188,7,1) 48
     
  
 }
+
+@media (max-width:500px){
+
+
+/*     
+    .play-container{
+        position:absolute;
+        width:100%;
+        height:100%;
+        display: flex;
+    
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.8); 
+        transition: .5s ease-in-out;
+    } */
+    .play-btn{
+    
+        width:70%;
+
+
+    }
+
+
+
+    .game{
+        display:flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center;
+       
+        overflow-y: hidden;
+        font-family: sans-serif; */
+        /* margin-left:-.4rem; */
+
+    
+    
+    }
+
+    /* .main--wrapper{
+        display:flex;
+        gap:0rem;
+        width:100%;
+        height:100%; padding-bottom:2rem;
+        
+    
+    } */
+
+    .main{
+        width:100%;
+        padding-top:1rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap:.7rem;
+        height:100vh;
+
+        border:1px solid blue;
+    
+        
+        
+    }
+
+
+
+  
+    .turns, .title-y{
+        color: rgb(5, 196, 34);
+        text-shadow: -2px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+    }
+    .title-y{
+        font-family: 'Anton', sans-serif;
+        letter-spacing: 5px;
+    }
+    .turns {
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 3rem;;;
+        
+
+    
+    }
+
+    .new-game-btn, .back{
+        color:black;
+        font-size:2.5rem;
+        font-weight:700;
+        background:none;
+        width:50%;
+        border:none;
+        display: flex;
+        justify-content: center;
+        text-shadow: -2px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
+    }
+
+    .back{
+        border:5px solid black;
+        border-radius: 20%;
+        font-size: 2rem;
+        background: rgb(228,207,111);
+    background: radial-gradient(circle, rgba(228,207,111,1) 0%, rgba(194,188,7,1) 48%, rgba(9,172,28,1) 99%);
+    }
+
+    .new-game-btn:hover{
+        background:rgba(150, 150, 150, 0.4);
+        cursor: pointer;
+    }
+
+    .back:hover{
+        border:5px solid black;
+        border-radius: 20%;
+        font-size: 2rem;
+        background: rgb(153, 139, 74);
+        background: radial-gradient(circle, rgba(160, 145, 78, 0.8) 0%, rgba(133, 129, 5, 0.8) 48%, rgba(5, 109, 17, 0.8) 99%);
+        cursor: pointer;
+    }
+    .main{
+        width:100%;
+        padding-top:0rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap:.1rem;
+        height:100vh;
+    
+      
+        
+        
+    }
+
+    .card-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding:5%;
+        background-color: #000;
+        
+    
+    }
+
+}
