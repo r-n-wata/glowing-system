@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../css/Simpsons.css'
 import Card from "./Card";
-import * as ReactBootstrap from 'react-bootstrap'
+// import * as ReactBootstrap from 'react-bootstrap'
 
 
 
@@ -126,7 +126,7 @@ export default function Pokemon(){
                
                 <div className="main">
                 
-                {!loading && <ReactBootstrap.Spinner animation="grow" className="grow"/>}
+                {!loading }
                     <div className="card-grid">
 
                         {cards.map(card => (
