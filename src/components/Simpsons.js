@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../css/Simpsons.css'
 import Card from "./Card";
-// import * as ReactBootstrap from 'react-bootstrap'
+
 
 
 
@@ -44,11 +44,7 @@ export default function Pokemon(){
         setTurns(0)
     }
      
-     
-     
-    console.log(cards)
-    // console.log(shuffleCards)
-    
+ 
                 
 
    // handle choice
@@ -122,7 +118,6 @@ export default function Pokemon(){
 
                 <h2 className={!play ? 'hidden' : "turns"}>Score: {turns}</h2>
                 <button type='button' className={!play ? 'hidden' : "new-game-btn" } onClick={shuffleCards}>Restart</button>
-                {/* <button onClick={() => navigate(-1)}>Go back</button> */}
                 <button className="back" onClick={refreshPage}>Back</button>
                 </div>
                

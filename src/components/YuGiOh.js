@@ -26,8 +26,6 @@ export default function YuGiOh(){
                 const array = data.data
                 let cardObj = array.map(el => el = {src: el.card_images[0].image_url_small, matched:false})
                 setYugiohData(cardObj)
-                // console.log(data.data.map(el => el.card_images[0].image_url_small))
-                // setLoading(true)
                
         })
     }, [])
@@ -42,11 +40,6 @@ export default function YuGiOh(){
         setCards(setID)
         setTurns(0)
     }
-     
-    console.log(cards)
-    
-    
-                
 
    // handle choice
 
@@ -54,7 +47,6 @@ export default function YuGiOh(){
         choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
         
    }
-
 
    useEffect(() => {
     
@@ -116,7 +108,7 @@ export default function YuGiOh(){
                 </div>
                 
                 <div className="main-y">
-                    {/* <h1 className={!play ? 'hidden' : "title-y"}>Matching Game!</h1> */}
+                    
                     {!loading && yugiohData.length == 0 && <div className="loading-container"><img src={loadingIcon} alt='' className="loading"/></div>}
 
                     <div className="card-grid-y">
