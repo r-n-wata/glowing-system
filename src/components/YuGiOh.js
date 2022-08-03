@@ -13,7 +13,9 @@ export default function YuGiOh(){
     const [choiceTwo, setChoiceTwo] = useState(null)
     const [disabled, setDisabled] = useState(false)
     const [play, setPlay] =useState(false)
-    // const [loading , setLoading] = useState(false)
+    const [loading , setLoading] = useState(false)
+
+    const loadingIcon = require('../img/loading.gif')
     
     
     useEffect(() =>{
@@ -115,7 +117,7 @@ export default function YuGiOh(){
                 
                 <div className="main-y">
                     {/* <h1 className={!play ? 'hidden' : "title-y"}>Matching Game!</h1> */}
-                    {/* {!loading && <ReactBootstrap.Spinner animation="grow" className="grow"/>} */}
+                    {!loading && yugiohData.length == 0 && <div className="loading-container"><img src={loadingIcon} alt='' className="loading"/></div>}
 
                     <div className="card-grid-y">
                     

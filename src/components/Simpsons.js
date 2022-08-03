@@ -14,8 +14,8 @@ export default function Pokemon(){
     const [choiceTwo, setChoiceTwo] = useState(null)
     const [disabled, setDisabled] = useState(false)
     const [play, setPlay] =useState(false)
-    const [loading , setLoading] = useState(false)
-    
+    const [loading , setLoading] = useState(simpsonsData ? false: true)
+    const loadingIcon = require('../img/loading.gif')
 
     
     
@@ -105,6 +105,8 @@ export default function Pokemon(){
    function refreshPage() {
     window.location.reload(false);
   }
+
+  
     return (
         <div className="main--wrapper">
             <div className={play ? 'hidden' : "play-container"}>
@@ -126,8 +128,9 @@ export default function Pokemon(){
                
                 <div className="main">
                 
-                {!loading }
-                    <div className="card-grid">
+                {!loading && simpsonsData.length == 0 && <div className="loading-container"><img src={loadingIcon} alt='' className="loading"/></div>}
+
+                <div className={!simpsonsData ? 'hidden': 'card-grid'}>
 
                         {cards.map(card => (
                             
@@ -140,6 +143,7 @@ export default function Pokemon(){
                                 />
                             ))}
                     </div>
+                   
 
             </div>
           
