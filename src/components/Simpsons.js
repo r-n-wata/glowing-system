@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../css/Simpsons.css'
 import Card from "./Card";
-
-
-
+import Spinner from "./Spinner";
 
 export default function Pokemon(){
 
@@ -15,11 +13,12 @@ export default function Pokemon(){
     const [disabled, setDisabled] = useState(false)
     const [play, setPlay] =useState(false)
     const [loading , setLoading] = useState(simpsonsData ? false: true)
-    const loadingIcon = require('../img/loading.gif')
+    
 
     
     
     useEffect(() =>{
+        setLoading(true)
         fetch('https://simpsons-api-app.herokuapp.com/api/')
             .then(res => res.json())
             .then(data => {
@@ -28,9 +27,14 @@ export default function Pokemon(){
                 let cardObj = array.map(el => el = {src: el.image, matched:false})
                 setSimpsonsData(cardObj)
                 setLoading(true)
+                setCards([cardObj.slice(0, 6), cardObj.slice(0, 6)] )
                 
                
-        })
+        }).catch((err) => {
+            console.log(err)
+        }).finally(() => {
+            setLoading(false);
+        });
     }, [])
     
     
@@ -116,14 +120,14 @@ export default function Pokemon(){
 
             <div className="options-section">
 
-                <h2 className={!play ? 'hidden' : "turns"}>Score: {turns}</h2>
+                <h2 className={!play ? 'hidden' : "turns"}> Score: {turns}</h2>
                 <button type='button' className={!play ? 'hidden' : "new-game-btn" } onClick={shuffleCards}>Restart</button>
                 <button className="back" onClick={refreshPage}>Back</button>
                 </div>
                
                 <div className="main">
                 
-                {!loading && simpsonsData.length == 0 && <div className="loading-container"><img src={loadingIcon} alt='' className="loading"/></div>}
+                {loading && <Spinner/>}
 
                 <div className={!simpsonsData ? 'hidden': 'card-grid'}>
 

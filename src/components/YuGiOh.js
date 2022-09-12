@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../css/YuGiOh.css'
 import Card from "./Card"
-
+import Spinner from "./Spinner";
 
 
 export default function YuGiOh(){
@@ -19,6 +19,7 @@ export default function YuGiOh(){
     
     
     useEffect(() =>{
+        setLoading(true)
         fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php')
             .then(res => res.json())
             .then(data => {
@@ -26,8 +27,14 @@ export default function YuGiOh(){
                 const array = data.data
                 let cardObj = array.map(el => el = {src: el.card_images[0].image_url_small, matched:false})
                 setYugiohData(cardObj)
+                setCards([cardObj.slice(0, 6)] )
                
-        })
+               
+        }).catch((err) => {
+            console.log(err)
+        }).finally(() => {
+            setLoading(false);
+        });
     }, [])
     
     console.log(yugiohData)
@@ -109,7 +116,7 @@ export default function YuGiOh(){
                 
                 <div className="main-y">
                     
-                    {!loading && yugiohData.length == 0 && <div className="loading-container"><img src={loadingIcon} alt='' className="loading"/></div>}
+                    {loading && <Spinner/>}
 
                     <div className="card-grid-y">
                     
