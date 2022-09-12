@@ -15,7 +15,6 @@ export default function YuGiOh(){
     const [play, setPlay] =useState(false)
     const [loading , setLoading] = useState(false)
 
-    const loadingIcon = require('../img/loading.gif')
     
     
     useEffect(() =>{
@@ -27,7 +26,7 @@ export default function YuGiOh(){
                 const array = data.data
                 let cardObj = array.map(el => el = {src: el.card_images[0].image_url_small, matched:false})
                 setYugiohData(cardObj)
-                setCards([cardObj.slice(0, 6)] )
+                // setCards([cardObj.slice(0, 6)] )
                
                
         }).catch((err) => {
